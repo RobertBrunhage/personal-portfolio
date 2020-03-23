@@ -21,24 +21,19 @@ class NavigationBar extends React.Component {
 
   render() {
     return (
-      <nav className={styles.navbar} data-testid="NavigationBar">
-        <a href="#" className={styles.logo}>logo</a>
-        <FontAwesomeIcon className={styles.navbarToggle} onClick={this.toggleMobileNavbar} icon={faBars} />
-        <ul className={styles.mainNav} ref={this.mainNavRef}>
+      <nav data-testid="NavigationBar">
+
+        <FontAwesomeIcon className={styles.burgerToggle} onClick={this.toggleMobileNavbar} icon={faBars} />
+
+        <ul ref={this.mainNavRef}>
           <li>
-            <a href="#" className={styles.navLinks}>Home</a>
+            <a href="#">ABOUT ME</a>
           </li>
           <li>
-            <a href="#" className={styles.navLinks}>Products</a>
+            <a href="#">MY WORK</a>
           </li>
           <li>
-            <a href="#" className={styles.navLinks}>About Us</a>
-          </li>
-          <li>
-            <a href="#" className={styles.navLinks}>Contact Us</a>
-          </li>
-          <li>
-            <a href="#" className={styles.navLinks}>Blog</a>
+            <a href="#">CONTACT</a>
           </li>
         </ul>
       </nav>
