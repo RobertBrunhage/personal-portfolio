@@ -1,3 +1,10 @@
+@import "src/App.scss";
+
 .Hero {
   background-color: grey;
+  height: 640px;
+}
+
+.navbarPaddingTop {
+  padding-top: $navbar-height + 244px;
 }

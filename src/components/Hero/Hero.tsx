@@ -6,7 +6,7 @@ import NavigationBar from '../NavigationBar/NavigationBar';
 const Hero: React.FC = () => (
   <div className={styles.Hero} data-testid="Hero">
     <NavigationBar />
-    <h1>Hi, I'm Robert. <br /> A software Engineer.</h1>
+    <h1 className={styles.navbarPaddingTop}>Hi, I'm Robert. <br /> A software Engineer.</h1>
     <Cta />
   </div>
 );
