@@ -1,6 +1,23 @@
 $text-color: white;
 $navbar-height: 52px;
 
+@font-face {
+  font-family: "Montserrat";
+  src: local("Montserrat"), url(https://fonts.googleapis.com/css?family=Montserrat);
+}
+
 html {
   font-size: 62.5%;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+  font-size: 3.2rem;
+}
+
+p {
+  font-size: 1.6rem;
 }
