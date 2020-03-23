@@ -1,44 +1,37 @@
 import React, { createRef } from 'react';
 import styles from './NavigationBar.module.scss';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
 
-class NavigationBar extends React.Component {
-  constructor(props: never) {
-    super(props);
-    this.toggleMobileNavbar = this.toggleMobileNavbar.bind(this);
-  }
+const NavigationBar: React.FC = () => {
+  const mainNavRef = createRef<HTMLUListElement>();
+  const burgerButtonRef = createRef<HTMLDivElement>();
 
-  private mainNavRef = createRef<HTMLUListElement>()
+  return (<nav data-testid="NavigationBar">
 
-  toggleMobileNavbar() {
-    const navNode = this.mainNavRef.current;
+    <div className={styles.burgerButton} ref={burgerButtonRef} onClick={() => toggleMobileNavbar(mainNavRef.current, burgerButtonRef.current)}>
+      <div className={styles.bar1}></div>
+      <div className={styles.bar2}></div>
+      <div className={styles.bar3}></div>
+    </div>
 
-    if (navNode != null) {
-      navNode.classList.toggle(styles.active);
-    }
-  }
-
-  render() {
-    return (
-      <nav data-testid="NavigationBar">
-
-        <FontAwesomeIcon className={styles.burgerToggle} onClick={this.toggleMobileNavbar} icon={faBars} />
-
-        <ul ref={this.mainNavRef}>
-          <li>
-            <a href="/">ABOUT ME</a>
-          </li>
-          <li>
-            <a href="/">MY WORK</a>
-          </li>
-          <li>
-            <a href="/">CONTACT</a>
-          </li>
-        </ul>
-      </nav>
-    )
-  }
+    <ul ref={mainNavRef}>
+      <li>
+        <a href="/">ABOUT ME</a>
+      </li>
+      <li>
+        <a href="/">MY WORK</a>
+      </li>
+      <li>
+        <a href="/">CONTACT</a>
+      </li>
+    </ul>
+  </nav>)
 }
 
+function toggleMobileNavbar(navRefCurrent: any, burgerButtonRefCurrent: any) {
+
+  if (navRefCurrent != null && burgerButtonRefCurrent != null) {
+    burgerButtonRefCurrent.classList.toggle(styles.change);
+    navRefCurrent.classList.toggle(styles.active);
+  }
+}
 export default NavigationBar;
