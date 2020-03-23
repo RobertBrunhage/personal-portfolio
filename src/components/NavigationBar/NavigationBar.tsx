@@ -27,13 +27,13 @@ class NavigationBar extends React.Component {
 
         <ul ref={this.mainNavRef}>
           <li>
-            <a href="#">ABOUT ME</a>
+            <a href="/">ABOUT ME</a>
           </li>
           <li>
-            <a href="#">MY WORK</a>
+            <a href="/">MY WORK</a>
           </li>
           <li>
-            <a href="#">CONTACT</a>
+            <a href="/">CONTACT</a>
           </li>
         </ul>
       </nav>

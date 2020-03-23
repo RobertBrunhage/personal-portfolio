@@ -1,8 +1,13 @@
 @import "src/App.scss";
 
 .Hero {
-  background-color: grey;
-  height: 640px;
+  background: url(../../assets/background.png) no-repeat center center / cover;
+  height: 70vh;
+  display: grid;
+  grid-template-rows: max-content 1fr;
+  grid-template-areas:
+    "h"
+    "c";
 }
 
 .navbarPaddingTop {
@@ -12,4 +17,14 @@
 h1 {
   text-align: center;
   color: $text-color;
+}
+
+.header {
+  grid-area: h;
+  margin: 0 auto;
+}
+
+.cta {
+  grid-area: c;
+  margin: 34px auto 0 auto;
 }

@@ -1,1 +1,44 @@
-.Cta {}
+@import "src/App.scss";
+
+.cta {
+  a {
+    display: block;
+    width: 200px;
+    height: 48px;
+    line-height: 44px;
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: $text-color;
+    border: 2px solid $text-color;
+    border-radius: 4px;
+    letter-spacing: 2px;
+    text-align: center;
+    position: relative;
+    font-weight: bold;
+    transition: all 0.35s;
+  }
+
+  a span {
+    position: relative;
+    z-index: 2;
+  }
+
+  a:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #59344f;
+    transition: all 0.35s;
+  }
+
+  a:hover {
+    color: #fff;
+  }
+
+  a:hover:after {
+    width: 100%;
+  }
+}
