@@ -1,5 +1,10 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+### `Install the following`
+
+`npm i -g generate-react-cli`
+This will let you create components easily with: `generate-react component {ComponentName}` [generate-react-cli](https://www.npmjs.com/package/generate-react-cli)
+
 ## Available Scripts
 
 In the project directory, you can run:
