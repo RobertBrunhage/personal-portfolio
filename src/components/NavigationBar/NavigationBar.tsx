@@ -27,7 +27,7 @@ const NavigationBar: React.FC = () => {
   </nav>)
 }
 
-function toggleMobileNavbar(navRefCurrent: any, burgerButtonRefCurrent: any) {
+function toggleMobileNavbar(navRefCurrent: HTMLUListElement | null, burgerButtonRefCurrent: HTMLDivElement | null) {
 
   if (navRefCurrent != null && burgerButtonRefCurrent != null) {
     burgerButtonRefCurrent.classList.toggle(styles.change);
