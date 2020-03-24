@@ -7,7 +7,7 @@ const NavigationBar: React.FC = () => {
 
   return (<nav data-testid="NavigationBar">
 
-    <div className={styles.burgerButton} ref={burgerButtonRef} onClick={() => toggleMobileNavbar(mainNavRef.current, burgerButtonRef.current)}>
+    <div data-testid="BurgerButton" className={styles.burgerButton} ref={burgerButtonRef} onClick={() => toggleMobileNavbar(mainNavRef.current, burgerButtonRef.current)}>
       <div className={styles.bar1}></div>
       <div className={styles.bar2}></div>
       <div className={styles.bar3}></div>
