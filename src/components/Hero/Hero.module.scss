@@ -1,4 +1,5 @@
 @import "src/App.scss";
+@import "src/Animations.scss";
 
 .Hero {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
@@ -29,24 +30,4 @@
   margin: 34px auto 0 auto;
   align-self: start;
   animation: zeroToHundredOpacity 2s ease-out;
-}
-
-@keyframes slideInFromTop {
-  0% {
-    transform: translateY(-25%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes zeroToHundredOpacity {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }
