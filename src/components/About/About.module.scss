@@ -1,0 +1,41 @@
+$topBottomMargin: 10px 0 10px 0;
+
+.AboutSection {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "about"
+    "skills";
+  justify-items: center;
+}
+
+.Header {
+  grid-area: header;
+  text-align: center;
+  margin: $topBottomMargin;
+}
+
+.About {
+  grid-area: about;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: $topBottomMargin;
+
+  img {
+    margin: $topBottomMargin;
+  }
+
+  p {
+    padding: 12px;
+  }
+}
+
+.Skills {
+  grid-area: skills;
+  height: 400px;
+  width: 200px;
+  background-color: grey;
+  margin: $topBottomMargin;
+}
