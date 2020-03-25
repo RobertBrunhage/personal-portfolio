@@ -1,1 +1,15 @@
-.Header {}
+@import "src/App.scss";
+
+.Header {
+  display: inline-block;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 70%;
+    background: $dark-text-color;
+    left: 15%;
+    bottom: -4px;
+  }
+}

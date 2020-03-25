@@ -1,4 +1,5 @@
 $text-color: white;
+$dark-text-color: #424242;
 $navbar-height: 68px;
 
 /* montserrat-regular - latin */
@@ -49,16 +50,25 @@ $navbar-height: 68px;
 
 html {
   font-size: 62.5%;
+  height: 500vh;
 }
 
 body {
   font-family: "Montserrat", sans-serif;
+  background-color: grey;
 }
 
 h1 {
   font-size: 2.8rem;
+  color: $dark-text-color;
+}
+
+h2 {
+  font-size: 2.2rem;
+  color: $dark-text-color;
 }
 
 p {
   font-size: 1.6rem;
+  color: $dark-text-color;
 }

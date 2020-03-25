@@ -1,22 +1,27 @@
 import React from 'react';
 import styles from './About.module.scss';
+import helperStyles from '../../Helper.module.scss';
 import Header from '../shared/Header/Header';
 import Avatar from '../Avatar/Avatar';
 
-import background from '../../assets/hero-background.webp'
+import avatarImage from '../../assets/avatar.webp'
 
 const About: React.FC = () => (
   <section className={styles.AboutSection} data-testid="About">
-    <div className={styles.Header}>
-      <Header title="ABOUT" />
-    </div>
-    <div className={styles.About}>
-      <Avatar background={background} />
-      <p>Detta handlar om mig bla bla bla blasdlfkhas dlfasd lfkajs dölfkjasdölkfj asöldkfj aölskd fjaölskdf öalsdkf ölasdkj föalskdj fölaskd jfölaskjd fölaskdj fölskdjaf ösdlkfj aödslkf jöalsdk jföalskd jfölaskd faölsdkjf öaslkdjf öalsdfk öalsdkj fölsk jflskdj flskdfj slkdf slkd fsldkf jsldkfj sldkf lskdf sldkfj </p>
-    </div>
-    <div className={styles.Skills}>
+    <div className={`${styles.Container} ${helperStyles.MaxWidthContainer}`} >
+      <div className={styles.Header}>
+        <Header title="ABOUT" />
+      </div>
+      <div className={styles.About}>
+        <Avatar background={avatarImage} />
+        <h2>Who this?</h2>
+        <p>I'm a software engineer in currently based in Mölndal, Sweden. I have serious passion for developing solutions that fits you.</p>
+      </div>
+      <div className={styles.Skills}>
 
+      </div>
     </div>
+
   </section>
 );
 

@@ -1,6 +1,11 @@
 $topBottomMargin: 10px 0 10px 0;
 
 .AboutSection {
+  background-color: white;
+}
+
+.Container {
+  padding: 64px 0px;
   display: grid;
   grid-template-areas:
     "header"
@@ -10,6 +15,7 @@ $topBottomMargin: 10px 0 10px 0;
 }
 
 .Header {
+  padding-bottom: 64px;
   grid-area: header;
   text-align: center;
   margin: $topBottomMargin;
@@ -21,21 +27,33 @@ $topBottomMargin: 10px 0 10px 0;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin: $topBottomMargin;
 
-  img {
-    margin: $topBottomMargin;
+  h2 {
+    padding-top: 12px;
   }
 
   p {
-    padding: 12px;
+    padding: 16px;
+    max-width: 400px;
   }
 }
 
 .Skills {
+  margin-top: 48px;
   grid-area: skills;
   height: 400px;
   width: 200px;
   background-color: grey;
-  margin: $topBottomMargin;
+}
+
+@media only screen and (min-width: 768px) {
+  .Container {
+    grid-template-areas:
+      "header header"
+      "about skills";
+  }
+
+  .Skills {
+    margin-top: 0;
+  }
 }
