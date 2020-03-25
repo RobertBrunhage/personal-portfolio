@@ -29,13 +29,15 @@ describe('<NavigationBar />', () => {
   test('given menu choices when page renders then display menu choices', async () => {
     // ARRANGE
     const { findByText } = render(<NavigationBar />);
-    const aboutMeText = await waitForElement(() => findByText('about me'.toUpperCase()));
+    const homeText = await waitForElement(() => findByText('home'.toUpperCase()));
+    const aboutText = await waitForElement(() => findByText('about'.toUpperCase()));
     const myWorkText = await waitForElement(() => findByText('my work'.toUpperCase()));
     const contactText = await waitForElement(() => findByText('contact'.toUpperCase()));
 
     // ACT
     //ASSERT
-    expect(aboutMeText).toBeInTheDocument();
+    expect(homeText).toBeInTheDocument();
+    expect(aboutText).toBeInTheDocument();
     expect(myWorkText).toBeInTheDocument();
     expect(contactText).toBeInTheDocument();
   });

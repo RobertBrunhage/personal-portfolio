@@ -15,7 +15,10 @@ const NavigationBar: React.FC = () => {
 
     <ul ref={mainNavRef}>
       <li>
-        <a href="/">ABOUT ME</a>
+        <a href="/">HOME</a>
+      </li>
+      <li>
+        <a href="/">ABOUT</a>
       </li>
       <li>
         <a href="/">MY WORK</a>
