@@ -6,7 +6,7 @@ interface Avatar {
 }
 
 const Avatar: React.FC<Avatar> = props => (
-  <img className={styles.Avatar} data-testid="Avatar" src={props.background} />
+  <img className={styles.Avatar} data-testid="Avatar" src={props.background} alt="Selfie" />
 );
 
 export default Avatar;
