@@ -10,11 +10,12 @@
   grid-template-areas:
     "h"
     "c";
-}
 
-h1 {
-  text-align: center;
-  color: $text-color;
+  h1 {
+    text-align: center;
+    color: $text-color;
+    animation: slideInFromTop 1s ease-out;
+  }
 }
 
 .header {
@@ -27,4 +28,25 @@ h1 {
   grid-area: c;
   margin: 34px auto 0 auto;
   align-self: start;
+  animation: zeroToHundredOpacity 2s ease-out;
+}
+
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-25%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes zeroToHundredOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
