@@ -30,13 +30,4 @@ $skillBarHeight: 24px;
   .SkillBarPercent {
     animation: progressAnimation 1s 1 ease-out;
   }
-
-  .SkilBarPercentLabel {
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    vertical-align: middle;
-    padding-right: 12px;
-  }
 }

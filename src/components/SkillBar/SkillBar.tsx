@@ -22,8 +22,6 @@ const SkillBar: React.FC<SkillBarDetails> = ({ name, percent }) => {
         <div style={SkillBarPercentStyle} className={styles.SkillBarPercent}>
 
         </div>
-
-        <p className={styles.SkilBarPercentLabel}>{percent}%</p>
       </div>
     </div>
   )
