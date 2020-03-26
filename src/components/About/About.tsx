@@ -68,7 +68,7 @@ const About: React.FC = () => (
       <div className={styles.About}>
         <Avatar background={avatarImage} />
         <h2>Who this?</h2>
-        <p>I'm a software engineer in currently based in Mölndal, Sweden. I have serious passion for developing solutions that fits you.</p>
+        <p>I'm a software engineer that is currently based in Mölndal, Sweden. I have a serious passion for developing solutions that suits you.</p>
       </div>
       <div className={styles.Skills}>
         {
