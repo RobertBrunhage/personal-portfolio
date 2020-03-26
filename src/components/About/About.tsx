@@ -73,7 +73,7 @@ const About: React.FC = () => (
       <div className={styles.Skills}>
         {
           // Evaluate if sorting is the corret answer later when using Kontent for CMS.
-          skillBars.sort((a, b) => (a.percent > b.percent) ? -1 : 1).map(skill => <SkillBar name={skill.name} percent={skill.percent} />)
+          skillBars.sort((a, b) => (a.percent > b.percent) ? -1 : 1).map((skill, index) => <SkillBar name={skill.name} percent={skill.percent} key={index} />)
         }
       </div>
     </div>
