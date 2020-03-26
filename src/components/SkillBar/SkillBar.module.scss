@@ -1,0 +1,41 @@
+@import "src/Animations.scss";
+$skillBarHeight: 24px;
+
+.SkillBarBackground {
+  display: flex;
+  height: $skillBarHeight;
+  width: 100%;
+  background-color: #eeeeee;
+  margin-bottom: 4px;
+}
+
+.SkillBarLabel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #58ccdc;
+  width: 30%;
+  p {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+}
+
+.SkillBarPercentContainer {
+  width: 100%;
+  position: relative;
+
+  .SkillBarPercent {
+    animation: progressAnimation 1s 1 ease-out;
+  }
+
+  .SkilBarPercentLabel {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    vertical-align: middle;
+    padding-right: 12px;
+  }
+}
