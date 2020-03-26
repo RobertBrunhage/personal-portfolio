@@ -1,4 +1,4 @@
-@import "src/App.scss";
+@use "src/index.css";
 @import "src/Animations.scss";
 
 .Hero {
@@ -14,7 +14,7 @@
 
   h1 {
     text-align: center;
-    color: $text-color;
+    color: var(--gray0);
     animation: slideInFromTop 1s ease-out;
   }
 }

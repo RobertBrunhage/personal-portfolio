@@ -1,4 +1,4 @@
-@import "src/App.scss";
+@use "src/index.css";
 
 .Header {
   display: inline-block;
@@ -8,7 +8,7 @@
     position: absolute;
     height: 2px;
     width: 70%;
-    background: $dark-text-color;
+    background: var(--text);
     left: 15%;
     bottom: -4px;
   }

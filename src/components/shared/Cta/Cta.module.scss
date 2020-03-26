@@ -1,4 +1,4 @@
-@import "src/App.scss";
+@use "src/index.css";
 
 .cta {
   a {
@@ -8,8 +8,8 @@
     line-height: 44px;
     font-size: 1.8rem;
     text-decoration: none;
-    color: $text-color;
-    border: 2px solid $text-color;
+    color: var(--gray0);
+    border: 2px solid var(--gray0);
     border-radius: 4px;
     letter-spacing: 2px;
     text-align: center;

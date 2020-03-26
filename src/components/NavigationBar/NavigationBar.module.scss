@@ -1,4 +1,4 @@
-@import "src/App.scss";
+@use "src/index.css";
 @import "src/Animations.scss";
 
 * {
@@ -8,7 +8,7 @@
 }
 
 nav {
-  height: $navbar-height;
+  height: 68px;
   width: 100%;
   position: absolute;
 
@@ -19,13 +19,12 @@ nav {
     margin-left: 14px;
     margin-top: 14px;
     cursor: pointer;
-    color: $text-color;
     font-size: 2.4rem;
 
     div {
       width: 35px;
       height: 5px;
-      background-color: $text-color;
+      background-color: var(--gray0);
       margin: 6px 0;
       transition: 0.4s;
     }
@@ -34,14 +33,14 @@ nav {
   ul {
     list-style-type: none;
     display: none;
-    background-color: #333;
+    background-color: var(--background-dropdown);
 
     li {
       text-align: center;
       padding-top: 16px;
       padding-bottom: 16px;
       text-decoration: none;
-      color: $text-color;
+      color: var(--text);
       font-size: 2.4rem;
       animation: zeroToHundredOpacity 0.25s 1 ease-out;
       animation-fill-mode: both;
@@ -76,6 +75,8 @@ nav {
   .bar1 {
     -webkit-transform: rotate(-45deg) translate(-9px, 6px);
     transform: rotate(-45deg) translate(-9px, 6px);
+
+    background-color: var(--text);
   }
   .bar2 {
     opacity: 0;
@@ -83,6 +84,7 @@ nav {
   .bar3 {
     -webkit-transform: rotate(45deg) translate(-8px, -8px);
     transform: rotate(45deg) translate(-8px, -8px);
+    background-color: var(--text);
   }
 }
 
@@ -101,6 +103,7 @@ nav {
       li {
         margin-left: 40px;
         position: relative;
+        color: var(--gray0);
 
         a {
           /*effect-underline*/
