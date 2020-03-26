@@ -1,3 +1,4 @@
+@use 'src/index.css';
 @import "src/Animations.scss";
 $skillBarHeight: 24px;
 
@@ -5,7 +6,7 @@ $skillBarHeight: 24px;
   display: flex;
   height: $skillBarHeight;
   width: 100%;
-  background-color: #eeeeee;
+  background-color: var(--background-skill-bar);
   margin-bottom: 4px;
 }
 

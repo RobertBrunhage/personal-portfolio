@@ -1,7 +1,9 @@
+@use "src/index.css";
+
 $topBottomMargin: 10px 0 10px 0;
 
 .AboutSection {
-  background-color: white;
+  background-color: var(--background-about);
 }
 
 .Container {
@@ -42,7 +44,7 @@ $topBottomMargin: 10px 0 10px 0;
   grid-area: skills;
   height: 400px;
   width: 100%;
-  padding: 0 16px;
+  padding: 48px 16px;
 }
 
 @media only screen and (min-width: 1024px) {
