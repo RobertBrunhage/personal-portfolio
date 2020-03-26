@@ -39,14 +39,13 @@ $topBottomMargin: 10px 0 10px 0;
 }
 
 .Skills {
-  margin-top: 48px;
   grid-area: skills;
   height: 400px;
-  width: 200px;
-  background-color: grey;
+  width: 100%;
+  padding: 0 16px;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1024px) {
   .Container {
     grid-template-areas:
       "header header"
