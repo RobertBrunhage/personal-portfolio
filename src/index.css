@@ -81,6 +81,7 @@ code {
   --background: var(--gray0);
   --background-nav: transparent;
   --background-about: var(--background);
+  --background-my-work: var(--gray1);
   --background-skill-bar: var(--gray1);
   --background-dropdown: var(--gray0);
   --text: var(--gray6);
@@ -90,6 +91,7 @@ code {
   --background: var(--gray5);
   --background-nav: transparent;
   --background-about: var(--background);
+  --background-my-work: var(--gray4);
   --background-skill-bar: var(--gray4);
   --background-dropdown: var(--gray6);
   --text: var(--gray0);

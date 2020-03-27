@@ -1,0 +1,23 @@
+@use "src/index.css";
+
+.MyWork {
+  height: 70vh;
+  background-color: var(--background-my-work);
+}
+
+.Container {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "projects";
+  justify-items: center;
+}
+
+.Header {
+  margin-bottom: 64px;
+  grid-area: header;
+}
+
+.Projects {
+  grid-area: projects;
+}
