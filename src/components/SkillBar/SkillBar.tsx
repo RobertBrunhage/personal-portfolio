@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './SkillBar.module.scss';
 import CSS from 'csstype';
-import { SkillBarDetails } from '../../interfaces/SkillBarDetails';
+import { SkillBarDetails } from '../../models/SkillBarDetails';
 
 const SkillBar: React.FC<SkillBarDetails> = ({ name, percent }) => {
 
