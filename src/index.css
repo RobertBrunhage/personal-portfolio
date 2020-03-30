@@ -84,6 +84,7 @@ code {
   --background-my-work: var(--gray1);
   --background-skill-bar: var(--gray1);
   --background-dropdown: var(--gray0);
+  --project-overlay: var(--gray1);
   --text: var(--gray6);
 }
 
@@ -94,5 +95,6 @@ code {
   --background-my-work: var(--gray4);
   --background-skill-bar: var(--gray4);
   --background-dropdown: var(--gray6);
+  --project-overlay: var(--gray6);
   --text: var(--gray0);
 }
