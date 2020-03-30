@@ -6,7 +6,7 @@ import Avatar from '../Avatar/Avatar';
 
 import avatarImage from '../../assets/avatar.webp'
 import SkillBar from '../SkillBar/SkillBar';
-import { SkillBarDetails } from '../../interfaces/SkillBarDetails';
+import { SkillBarDetails } from '../../models/SkillBarDetails';
 
 const skillBars: SkillBarDetails[] = [
   {

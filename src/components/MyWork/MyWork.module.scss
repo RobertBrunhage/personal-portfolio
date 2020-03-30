@@ -23,9 +23,75 @@
   grid-gap: 4rem;
 }
 
+.ModalContainer {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-areas:
+    "ModalDate"
+    "ModalImage"
+    "ModalDescription"
+    "ModalLinkContainer"
+    "ModalButton";
+
+  .ModalLinkContainer {
+    display: inherit;
+  }
+
+  a {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.4rem;
+
+    &:hover {
+      font-weight: bold;
+    }
+  }
+
+  .ModalDate {
+    grid-area: ModalDate;
+  }
+
+  .ModalImage {
+    grid-area: ModalImage;
+  }
+
+  .ModalDescription {
+    grid-area: ModalDescription;
+  }
+
+  .ModalLinkContainer {
+    grid-area: ModalLinkContainer;
+  }
+
+  .ModalButton {
+    grid-area: ModalButton;
+  }
+}
+
 @media (min-width: 786px) {
   .Projects {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ModalContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "ModalDate ModalDate ModalDate"
+      "ModalImage ModalImage ModalImage"
+      "ModalDescription ModalDescription ModalDescription"
+      "ModalLinkContainer ModalLinkContainer ModalLinkContainer"
+      "ModalButton ModalButton ModalButton";
+
+    .ModalLinkContainer {
+      display: flex;
+
+      justify-content: space-evenly;
+
+      a {
+        flex: 1 1 0px;
+      }
+    }
   }
 }
 
