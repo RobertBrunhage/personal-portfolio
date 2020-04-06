@@ -1,1 +1,17 @@
-.ContactMe {}
+.ContactMe {
+    display: grid;
+    grid-template-areas:
+        "header"
+        "contact";
+    justify-items: center;
+}
+
+.Header {
+    grid-area: header;
+}
+
+.ContactForm {
+    grid-area: contact;
+    padding: 24px 16px;
+    width: 100%;
+}

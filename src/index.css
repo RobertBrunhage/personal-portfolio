@@ -72,9 +72,10 @@ code {
   --gray4: #454e56;
   --gray5: #2a2e35;
   --gray6: #12181b;
-  --blue: #0084a5;
-  --purple: #a82dd1;
-  --yellow: #fff565;
+  --purple5: #59344f;
+  --purple6: #45293d;
+  --blue4: #58ccdc;
+  --blue5: #2facbd;
 }
 
 .light {
@@ -86,6 +87,8 @@ code {
   --background-dropdown: var(--gray0);
   --project-overlay: var(--gray1);
   --text: var(--gray6);
+  --button: var(--purple5);
+  --button-hover: var(--purple6);
 }
 
 .dark {
@@ -97,6 +100,8 @@ code {
   --background-dropdown: var(--gray6);
   --project-overlay: var(--gray6);
   --text: var(--gray0);
+  --button: var(--purple5);
+  --button-hover: var(--purple6);
 }
 
 .modal-open {
