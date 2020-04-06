@@ -21,3 +21,13 @@ test('given navigationbar when page is loaded then navigationbar is displayed', 
   //ASSERT
   expect(navigationBar).toBeInTheDocument();
 });
+
+test('given contact me section when page is loaded then contact me section is displayed', () => {
+  // ARRANGE
+  const { getByTestId } = render(<App />);
+  const contactMe = getByTestId("ContactMe");
+
+  // ACT
+  //ASSERT
+  expect(contactMe).toBeInTheDocument();
+});
