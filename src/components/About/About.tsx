@@ -60,7 +60,7 @@ const skillBars: SkillBarDetails[] = [
 ]
 
 const About: React.FC = () => (
-  <section className={styles.AboutSection} data-testid="About">
+  <section id="about" className={styles.AboutSection} data-testid="About">
     <div className={`${styles.Container} ${helperStyles.SectionContainer}`} >
       <div className={styles.Header}>
         <Header title="ABOUT" />

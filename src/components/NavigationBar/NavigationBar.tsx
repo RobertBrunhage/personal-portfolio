@@ -16,16 +16,16 @@ const NavigationBar: React.FC = () => {
 
     <ul ref={mainNavRef} className={stylesHelper.MaxWidthContainer}>
       <li>
-        <a href="/">HOME</a>
+        <a href="#hero">HOME</a>
       </li>
       <li>
-        <a href="/">ABOUT</a>
+        <a href="#about">ABOUT</a>
       </li>
       <li>
-        <a href="/">MY WORK</a>
+        <a href="#my-work">MY WORK</a>
       </li>
       <li>
-        <a href="/">CONTACT</a>
+        <a href="#contact-me">CONTACT</a>
       </li>
     </ul>
   </nav>)

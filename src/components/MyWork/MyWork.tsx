@@ -35,7 +35,7 @@ const MyWork: React.FC = () => {
     setSelectedProject(selectedProject);
   }
 
-  return (<section className={styles.MyWork} data-testid="MyWork">
+  return (<section id="my-work" className={styles.MyWork} data-testid="MyWork">
     <div className={`${styleHelper.SectionContainer} ${styles.Container}`}>
       <div className={styles.Header}>
         <Header title="MY WORK" />
