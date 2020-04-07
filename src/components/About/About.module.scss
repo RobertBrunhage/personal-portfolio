@@ -1,7 +1,5 @@
 @use "src/index.css";
 
-$topBottomMargin: 10px 0 10px 0;
-
 .AboutSection {
   background-color: var(--background-about);
 }
@@ -20,7 +18,6 @@ $topBottomMargin: 10px 0 10px 0;
   padding-bottom: 64px;
   grid-area: header;
   text-align: center;
-  margin: $topBottomMargin;
 }
 
 .About {
@@ -52,10 +49,12 @@ $topBottomMargin: 10px 0 10px 0;
     grid-template-areas:
       "header header"
       "about skills";
+
+    grid-template-columns: 1fr 1fr;
   }
 
   .Skills {
     margin-top: 0;
-    padding: 0px 16px;
+    padding: 0px 32px;
   }
 }
