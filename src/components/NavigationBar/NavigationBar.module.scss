@@ -10,12 +10,15 @@
 nav {
   height: 68px;
   width: 100%;
-  position: absolute;
+  position: fixed;
+  background-color: var(--navigation-bar);
+  z-index: 10;
 
   .burgerButton {
     display: block;
     position: absolute;
-    z-index: 999;
+    // stay on top of navigation bar
+    z-index: 11;
     margin-left: 14px;
     margin-top: 14px;
     cursor: pointer;
@@ -97,8 +100,10 @@ nav {
 
     ul {
       display: flex;
+      height: 100%;
       padding-right: 30px;
       justify-content: flex-end;
+      align-items: center;
       background-color: transparent;
 
       li {
@@ -145,5 +150,8 @@ nav {
         animation-delay: 800ms;
       }
     }
+  }
+  .active {
+    display: flex;
   }
 }

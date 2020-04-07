@@ -5,7 +5,7 @@ import ContactForm from './ContactForm/ContactForm';
 import styleHelper from '../../Helper.module.scss';
 
 const ContactMe: React.FC = () => (
-  <section className={`${styleHelper.MaxWidthContainer} ${styles.ContactMe}`} data-testid="ContactMe">
+  <section className={`${styleHelper.SectionContainer} ${styles.ContactMe}`} data-testid="ContactMe">
     <div className={styles.Header}>
       <Header title="LET'S GET IN TOUCH" />
     </div>

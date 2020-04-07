@@ -17,7 +17,7 @@ const FullscreenModal: React.FC<Modal> = (props) => {
 
   return (
     <div className={styles.FullscreenModal} data-testid="FullscreenModal">
-      <div className={`${styleHelper.MaxWidthContainer} ${styles.Center}`}>
+      <div className={`${styleHelper.SectionContainer} ${styles.Center}`}>
         <a onClick={() => props.setModalState(false)} className={styles.CloseModalBtn}>&times;</a>
 
         <div className={styles.ModalContent}>

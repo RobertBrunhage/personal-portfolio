@@ -1,5 +1,6 @@
 import React, { createRef } from 'react';
 import styles from './NavigationBar.module.scss';
+import stylesHelper from '../../Helper.module.scss';
 
 const NavigationBar: React.FC = () => {
   const mainNavRef = createRef<HTMLUListElement>();
@@ -13,7 +14,7 @@ const NavigationBar: React.FC = () => {
       <div className={styles.bar3}></div>
     </div>
 
-    <ul ref={mainNavRef}>
+    <ul ref={mainNavRef} className={stylesHelper.MaxWidthContainer}>
       <li>
         <a href="/">HOME</a>
       </li>

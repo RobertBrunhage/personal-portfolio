@@ -36,7 +36,7 @@ const MyWork: React.FC = () => {
   }
 
   return (<section className={styles.MyWork} data-testid="MyWork">
-    <div className={`${styleHelper.MaxWidthContainer} ${styles.Container}`}>
+    <div className={`${styleHelper.SectionContainer} ${styles.Container}`}>
       <div className={styles.Header}>
         <Header title="MY WORK" />
       </div>
