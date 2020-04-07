@@ -69,6 +69,7 @@ code {
   --gray1: #dbe1e8;
   --gray2: #b2becd;
   --gray3: #6c7983;
+  --gray3-80: #6c7983b9;
   --gray4: #454e56;
   --gray5: #2a2e35;
   --gray6: #12181b;
@@ -85,6 +86,7 @@ code {
   --background-my-work: var(--gray1);
   --background-skill-bar: var(--gray1);
   --background-dropdown: var(--gray0);
+  --navigation-bar: var(--gray3-80);
   --project-overlay: var(--gray1);
   --text: var(--gray6);
   --button: var(--purple5);
@@ -98,6 +100,7 @@ code {
   --background-my-work: var(--gray4);
   --background-skill-bar: var(--gray4);
   --background-dropdown: var(--gray6);
+  --navigation-bar: var(--gray3-80);
   --project-overlay: var(--gray6);
   --text: var(--gray0);
   --button: var(--purple5);
