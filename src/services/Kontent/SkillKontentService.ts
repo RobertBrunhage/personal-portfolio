@@ -6,7 +6,7 @@ import { map } from 'rxjs/operators';
 
 export class SkillKontentService implements KontentService<Skill> {
     private deliveryClient = new DeliveryClient({
-        projectId: 'faf7e9cb-4b42-004f-73e5-6a65ee12e540',
+        projectId: process.env.REACT_APP_PUBLIC_KONTENT_API,
     });
 
     listenAll: Observable<Skill[]> = this.deliveryClient.items<ContentItem>()
