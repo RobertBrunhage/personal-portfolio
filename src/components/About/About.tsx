@@ -2,11 +2,11 @@ import React from 'react';
 import styles from './About.module.scss';
 import helperStyles from '../../Helper.module.scss';
 import Header from '../shared/Header/Header';
-import Avatar from '../Avatar/Avatar';
+import Avatar from './Avatar/Avatar';
 
 import avatarImage from '../../assets/avatar.webp'
-import SkillBar from '../SkillBar/SkillBar';
-import { SkillBarDetails } from '../../models/SkillBarDetails';
+import SkillBar from './SkillBar/SkillBar';
+import { SkillBarDetails } from '../shared/interfaces/SkillBarDetails';
 
 const skillBars: SkillBarDetails[] = [
   {

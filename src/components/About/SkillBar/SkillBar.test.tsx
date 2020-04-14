@@ -7,7 +7,7 @@ describe('<SkillBar />', () => {
   afterEach(cleanup);
 
   test('it should mount', () => {
-    const { getByTestId } = render(<SkillBar />);
+    const { getByTestId } = render(<SkillBar name={"Typescript"} percent={40} />);
     const skillBar = getByTestId('SkillBar');
 
     expect(skillBar).toBeInTheDocument();

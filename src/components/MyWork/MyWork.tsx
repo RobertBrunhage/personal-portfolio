@@ -3,34 +3,46 @@ import styles from './MyWork.module.scss';
 
 import styleHelper from '../../Helper.module.scss';
 import Header from '../shared/Header/Header';
-import Project, { initialProjectState } from '../Project/Project';
 
 import tempImage from '../../assets/youtube-icon.png'
-import { ProjectDetails } from '../../models/ProjectDetails';
 import FullscreenModal from '../FullscreenModal/FullscreenModal';
 import styleModal from '../FullscreenModal/FullscreenModal.module.scss';
 import { GoMarkGithub } from "react-icons/go";
+import { Project } from '../../models/Project';
+import ProjectBox from './Project/ProjectBox';
 
 // Todo: replace with "Kontent"
-const projects: ProjectDetails[] = [
-  {
-    title: "YouTube Channel",
-    image: tempImage,
-    date: "2018-08 - now",
-    description: "nice description",
-    webLink: "http://www.youtube.com/c/robertbrunhage",
-    webLinkName: "YouTube Channel",
-    webLink2: "",
-    webLink2Name: "",
-    githubLink: ""
-  }
+const projects: Project[] = [
+  new Project(
+    "YouTube Channel",
+    tempImage,
+    "2018-08 - now",
+    "nice description",
+    "http://www.youtube.com/c/robertbrunhage",
+    "",
+    "",
+    "",
+    ""
+  )
 ]
+
+const initialProjectState = new Project(
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  ""
+)
 
 const MyWork: React.FC = () => {
   const [modalState, setModalState] = useState(false);
   const [selectedProject, setSelectedProject] = useState(initialProjectState);
 
-  const openModal = (selectedProject: ProjectDetails) => {
+  const openModal = (selectedProject: Project) => {
     setModalState(true);
     setSelectedProject(selectedProject);
   }
@@ -43,15 +55,8 @@ const MyWork: React.FC = () => {
       <div className={styles.Projects}>
         {projects.map((project, index) => {
           return (
-            <Project
+            <ProjectBox
               title={project.title}
-              date={project.date}
-              description={project.description}
-              webLink={project.webLink}
-              webLinkName={project.webLinkName}
-              webLink2={project.webLink2}
-              webLink2Name={project.webLink2Name}
-              githubLink={project.githubLink}
               image={project.image}
               key={index}
               onClick={() => openModal(project)} />
