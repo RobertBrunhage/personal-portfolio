@@ -6,57 +6,57 @@ import Avatar from './Avatar/Avatar';
 
 import avatarImage from '../../assets/avatar.webp'
 import SkillBar from './SkillBar/SkillBar';
-import { SkillBarDetails } from '../shared/interfaces/SkillBarDetails';
+import { Skill } from '../../models/Skill';
 
-const skillBars: SkillBarDetails[] = [
-  {
-    name: "Flutter",
-    percent: 90
-  },
-  {
-    name: "React",
-    percent: 70
-  },
-  {
-    name: "Angular",
-    percent: 40
-  },
-  {
-    name: "Dart",
-    percent: 90
-  },
-  {
-    name: "C#",
-    percent: 80
-  },
-  {
-    name: "Kotlin",
-    percent: 60
-  },
-  {
-    name: "TypeScript",
-    percent: 60
-  },
-  {
-    name: "JavaScript",
-    percent: 60
-  },
-  {
-    name: "HTML",
-    percent: 70
-  },
-  {
-    name: "CSS",
-    percent: 70
-  },
-  {
-    name: "Android",
-    percent: 50
-  },
-  {
-    name: "Rx",
-    percent: 60
-  },
+const skillBars: Skill[] = [
+  new Skill(
+    "Flutter",
+    90
+  ),
+  new Skill(
+    "React",
+    70
+  ),
+  new Skill(
+    "Angular",
+    40
+  ),
+  new Skill(
+    "Dart",
+    90
+  ),
+  new Skill(
+    "C#",
+    80
+  ),
+  new Skill(
+    "Kotlin",
+    60
+  ),
+  new Skill(
+    "TypeScript",
+    60
+  ),
+  new Skill(
+    "JavaScript",
+    60
+  ),
+  new Skill(
+    "HTML",
+    70
+  ),
+  new Skill(
+    "CSS",
+    70
+  ),
+  new Skill(
+    "Android",
+    50
+  ),
+  new Skill(
+    "Rx",
+    60
+  ),
 ]
 
 const About: React.FC = () => (
