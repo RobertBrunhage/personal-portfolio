@@ -1,21 +1,18 @@
 import React from 'react';
-import styles from './Project.module.scss';
-import { ProjectDetails } from '../../models/ProjectDetails';
-import { Clickable } from '../../models/Clickable';
+import styles from './ProjectBox.module.scss';
+import { Clickable } from '../../shared/interfaces/Clickable';
+
+interface ProjectDetails {
+  title: string,
+  image: string,
+}
 
 export const initialProjectState: ProjectDetails = {
   title: "",
   image: "",
-  date: "",
-  description: "",
-  webLink: "",
-  webLinkName: "",
-  webLink2: "",
-  webLink2Name: "",
-  githubLink: ""
 }
 
-const Project: React.FC<ProjectDetails & Clickable> = (props) => (
+const ProjectBox: React.FC<ProjectDetails & Clickable> = (props) => (
   <div className={styles.Project} data-testid="Project">
     <img src={props.image} />
     <div className={styles.Overlay}>
@@ -27,4 +24,4 @@ const Project: React.FC<ProjectDetails & Clickable> = (props) => (
   </div>
 );
 
-export default Project;
+export default ProjectBox;
