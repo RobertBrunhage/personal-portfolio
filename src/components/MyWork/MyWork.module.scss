@@ -53,6 +53,9 @@
 
   .ModalImage {
     grid-area: ModalImage;
+    background-color: var(--background);
+    border-radius: 8px;
+    margin: 0 auto;
   }
 
   .ModalDescription {
