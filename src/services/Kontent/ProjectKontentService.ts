@@ -2,7 +2,7 @@ import { KontentService } from "./KontentService";
 import { DeliveryClient, ContentItem } from "@kentico/kontent-delivery";
 
 import { Observable } from "rxjs";
-import { map, distinct, distinctUntilChanged } from 'rxjs/operators';
+import { map } from 'rxjs/operators';
 import { Project } from "../../models/Project";
 
 export class ProjectKontentService implements KontentService<Project> {
