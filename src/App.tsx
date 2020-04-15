@@ -5,10 +5,14 @@ import NavigationBar from './components/NavigationBar/NavigationBar';
 import About from './components/About/About';
 import MyWork from './components/MyWork/MyWork';
 import ContactMe from './components/ContactMe/ContactMe';
-import { Provider } from './context';
+import { Provider, Services } from './context';
 import { SkillKontentService } from './services/Kontent/SkillKontentService';
+import { ProjectKontentService } from './services/Kontent/ProjectKontentService';
 
-const context = { skillKontentService: new SkillKontentService() };
+const context: Services = {
+  skillKontentService: new SkillKontentService(),
+  projectKontentService: new ProjectKontentService()
+};
 
 function App() {
   return (

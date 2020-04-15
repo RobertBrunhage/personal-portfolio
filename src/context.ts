@@ -2,9 +2,11 @@
 import { createContext } from 'react';
 import { KontentService } from './services/Kontent/KontentService';
 import { Skill } from './models/Skill';
+import { Project } from './models/Project';
 
-interface Services {
-    skillKontentService: KontentService<Skill>
+export interface Services {
+    skillKontentService: KontentService<Skill>,
+    projectKontentService: KontentService<Project>
 }
 
 export const AppContext = createContext<Partial<Services>>({});

@@ -1,30 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import styles from './MyWork.module.scss';
 
 import styleHelper from '../../Helper.module.scss';
 import Header from '../shared/Header/Header';
 
-import tempImage from '../../assets/youtube-icon.png'
 import FullscreenModal from '../FullscreenModal/FullscreenModal';
 import styleModal from '../FullscreenModal/FullscreenModal.module.scss';
 import { GoMarkGithub } from "react-icons/go";
 import { Project } from '../../models/Project';
 import ProjectBox from './Project/ProjectBox';
-
-// Todo: replace with "Kontent"
-const projects: Project[] = [
-  new Project(
-    "YouTube Channel",
-    tempImage,
-    "2018-08 - now",
-    "nice description",
-    "http://www.youtube.com/c/robertbrunhage",
-    "",
-    "",
-    "",
-    ""
-  )
-]
+import { AppContext } from '../../context';
 
 const initialProjectState = new Project(
   "",
@@ -39,8 +24,18 @@ const initialProjectState = new Project(
 )
 
 const MyWork: React.FC = () => {
+  const appContext = useContext(AppContext);
+
   const [modalState, setModalState] = useState(false);
   const [selectedProject, setSelectedProject] = useState(initialProjectState);
+  const [projects, setProjects] = useState<Project[]>();
+
+  useEffect(() => {
+    const subscription = appContext.projectKontentService?.listenAll.subscribe(setProjects);
+    return () => {
+      subscription?.unsubscribe();
+    }
+  }, []);
 
   const openModal = (selectedProject: Project) => {
     setModalState(true);
@@ -53,7 +48,7 @@ const MyWork: React.FC = () => {
         <Header title="MY WORK" />
       </div>
       <div className={styles.Projects}>
-        {projects.map((project, index) => {
+        {projects?.map((project, index) => {
           return (
             <ProjectBox
               title={project.title}
