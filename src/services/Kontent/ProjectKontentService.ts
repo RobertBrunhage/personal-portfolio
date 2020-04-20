@@ -15,9 +15,11 @@ export class ProjectKontentService implements KontentService<Project> {
         .toObservable()
         .pipe(
             map((response) => response.items.map((contentItem) => {
+                console.log(contentItem);
                 return new Project(
                     contentItem.title?.value,
                     contentItem.image?.value[0]?.url,
+                    contentItem.image?.value[0]?.description,
                     contentItem.description?.value,
                     contentItem.weblink?.value,
                     contentItem.weblinkname?.value,

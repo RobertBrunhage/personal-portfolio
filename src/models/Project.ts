@@ -1,7 +1,8 @@
 export class Project {
-    constructor(title: string, image: string, description: string, webLink: string, webLinkName: string, webLink2: string, webLink2Name: string, githubLink: string, date: string) {
+    constructor(title: string, image: string, imageAlt: string, description: string, webLink: string, webLinkName: string, webLink2: string, webLink2Name: string, githubLink: string, date: string) {
         this.title = title;
         this.image = image;
+        this.imageAlt = imageAlt;
         this.description = description;
         this.webLink = webLink;
         this.webLinkName = webLinkName;
@@ -13,6 +14,7 @@ export class Project {
 
     title!: string;
     image!: string;
+    imageAlt!: string;
     description!: string;
     webLink!: string;
     webLinkName!: string;
