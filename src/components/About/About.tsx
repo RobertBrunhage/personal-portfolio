@@ -10,6 +10,7 @@ import { AppContext } from '../../context';
 import { useContext } from "react";
 import { Skill } from '../../models/Skill';
 import { map } from 'rxjs/operators';
+import SocialButtons from './SocialButtons/SocialButtons';
 
 const About: React.FC = () => {
   const appContext = useContext(AppContext);
@@ -33,6 +34,7 @@ const About: React.FC = () => {
         <Avatar background={avatarImage} />
         <h2>Who this?</h2>
         <p>I'm a software engineer that is currently based in Mölndal, Sweden. I have a serious passion for developing solutions that suits you.</p>
+        <SocialButtons />
       </div>
       <div className={styles.Skills}>
         {
