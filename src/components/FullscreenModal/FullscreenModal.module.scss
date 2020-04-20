@@ -15,10 +15,10 @@
 
     .CloseModalBtn {
         padding: 8px;
-        text-decoration: none;
         font-size: 36px;
         color: #818181;
-        display: block; /* Display block instead of inline */
+        background-color: transparent;
+        border: none;
         position: absolute;
         top: 20px;
         right: 45px;

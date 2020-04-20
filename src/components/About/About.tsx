@@ -22,7 +22,7 @@ const About: React.FC = () => {
     return () => {
       subscription?.unsubscribe();
     }
-  }, []);
+  }, [appContext.skillKontentService]);
 
   return (<section id="about" className={styles.AboutSection} data-testid="About">
     <div className={`${styles.Container} ${helperStyles.SectionContainer}`} >

@@ -20,6 +20,7 @@ const initialProjectState = new Project(
   "",
   "",
   "",
+  "",
   ""
 )
 
@@ -35,7 +36,7 @@ const MyWork: React.FC = () => {
     return () => {
       subscription?.unsubscribe();
     }
-  }, []);
+  }, [appContext.projectKontentService]);
 
   const openModal = (selectedProject: Project) => {
     setModalState(true);
@@ -53,6 +54,7 @@ const MyWork: React.FC = () => {
             <ProjectBox
               title={project.title}
               image={project.image}
+              imageAlt={project.imageAlt}
               key={index}
               onClick={() => openModal(project)} />
           )
@@ -63,12 +65,12 @@ const MyWork: React.FC = () => {
     <FullscreenModal isOpen={modalState} setModalState={setModalState} title={selectedProject.title}>
       <div className={styles.ModalContainer}>
         <p className={styles.ModalDate}>{selectedProject.date}</p>
-        <img className={styles.ModalImage} src={selectedProject.image} alt="project image" />
+        <img className={styles.ModalImage} src={selectedProject.image} alt={selectedProject.imageAlt} />
         <p className={styles.ModalDescription}>{selectedProject.description}</p>
         <div className={styles.ModalLinkContainer}>
-          {selectedProject.githubLink === "" ? null : <a href={selectedProject.githubLink} target="_blank"><GoMarkGithub fontSize="20px" /></a>}
-          {selectedProject.webLink === "" ? null : <a href={selectedProject.webLink} target="_blank">{selectedProject.webLinkName}</a>}
-          {selectedProject.webLink2 === "" ? null : <a href={selectedProject.webLink2} target="_blank">{selectedProject.webLink2Name}</a>}
+          {selectedProject.githubLink === "" ? null : <a href={selectedProject.githubLink} rel="noopener noreferrer" target="_blank"><GoMarkGithub fontSize="20px" /></a>}
+          {selectedProject.webLink === "" ? null : <a href={selectedProject.webLink} rel="noopener noreferrer" target="_blank">{selectedProject.webLinkName}</a>}
+          {selectedProject.webLink2 === "" ? null : <a href={selectedProject.webLink2} rel="noopener noreferrer" target="_blank">{selectedProject.webLink2Name}</a>}
         </div>
         <div className={`${styles.ModalButton} ${styleModal.Button}`} onClick={() => setModalState(false)}><span>Close</span></div>
       </div>
