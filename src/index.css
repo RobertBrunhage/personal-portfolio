@@ -56,7 +56,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  background-color: var(--background);
+  background: var(--background);
+  transition: background 500ms ease-in-out, color 1000ms ease-in-out;
 }
 
 code {
@@ -82,28 +83,30 @@ code {
 
 .light {
   --background: var(--gray0);
+  --background-reversed: var(--gray5);
   --background-nav: transparent;
-  --background-about: var(--background);
   --background-my-work: var(--gray1);
   --background-skill-bar: var(--gray1);
   --background-dropdown: var(--gray0);
   --navigation-bar: var(--gray3-80);
   --project-overlay: var(--gray1);
   --text: var(--gray6);
+  --text-reversed: var(--gray0);
   --button: var(--purple5);
   --button-hover: var(--purple6);
 }
 
 .dark {
   --background: var(--gray5);
+  --background-reversed: var(--gray0);
   --background-nav: transparent;
-  --background-about: var(--background);
   --background-my-work: var(--gray4);
   --background-skill-bar: var(--gray4);
   --background-dropdown: var(--gray6);
   --navigation-bar: var(--gray3-80);
   --project-overlay: var(--gray6);
   --text: var(--gray0);
+  --text-reversed: var(--gray6);
   --button: var(--purple5);
   --button-hover: var(--purple6);
 }

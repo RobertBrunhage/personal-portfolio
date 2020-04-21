@@ -1,0 +1,21 @@
+.ThemeSwitcherButton {
+    background: var(--background-reversed);
+    border-radius: 4px;
+    width: 8rem;
+    padding: 0.5rem;
+    transition: background 500ms ease-in-out, color 200ms ease;
+
+    color: var(--text-reversed);
+    text-align: center;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .ThemeSwitcherButton {
+        background: var(--background);
+        color: var(--text);
+    }
+}

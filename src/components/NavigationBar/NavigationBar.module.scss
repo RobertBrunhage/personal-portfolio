@@ -40,7 +40,8 @@ nav {
     background-color: var(--background-dropdown);
 
     li {
-      text-align: center;
+      display: flex;
+      justify-content: center;
       padding-top: 16px;
       padding-bottom: 16px;
       text-decoration: none;
@@ -67,6 +68,9 @@ nav {
     }
     :nth-child(4) {
       animation-delay: 400ms;
+    }
+    :nth-child(5) {
+      animation-delay: 500ms;
     }
   }
 }
@@ -148,6 +152,9 @@ nav {
       }
       :nth-child(4) {
         animation-delay: 800ms;
+      }
+      :nth-child(5) {
+        animation-delay: 1000ms;
       }
     }
   }
