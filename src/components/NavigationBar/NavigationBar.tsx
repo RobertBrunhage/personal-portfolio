@@ -1,6 +1,7 @@
 import React, { createRef } from 'react';
 import styles from './NavigationBar.module.scss';
 import stylesHelper from '../../Helper.module.scss';
+import ThemeSwitcherButton from '../ThemeSwitcherButton/ThemeSwitcherButton';
 
 const NavigationBar: React.FC = () => {
   const mainNavRef = createRef<HTMLUListElement>();
@@ -15,6 +16,9 @@ const NavigationBar: React.FC = () => {
     </div>
 
     <ul ref={mainNavRef} className={stylesHelper.MaxWidthContainer}>
+      <li>
+        <ThemeSwitcherButton />
+      </li>
       <li>
         <a href="#hero">HOME</a>
       </li>

@@ -14,3 +14,10 @@ p {
   font-size: 1.6rem;
   color: var(--text);
 }
+
+:focus {
+  outline: none;
+}
+::-moz-focus-inner {
+  border: 0;
+}
