@@ -12,4 +12,11 @@ describe('<ThemeSwitcherButton />', () => {
 
     expect(themeSwitcherButton).toBeInTheDocument();
   });
+
+  test('Given default dark mode When component is renedered Then display Light mode text', () => {
+    const { findByText } = render(<ThemeSwitcherButton />);
+    const darkModeText = findByText('Light');
+
+    expect(darkModeText).toBeTruthy();
+  });
 });
