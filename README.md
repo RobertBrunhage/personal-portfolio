@@ -1,9 +1,7 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-### `Install the following`
+# Install the following
 
 `npm i -g generate-react-cli`
-This will let you create components easily with: `generate-react component {ComponentName}` [generate-react-cli](https://www.npmjs.com/package/generate-react-cli)
+This will let you create components easily with: `generate-react component {ComponentName}` [generate-react-cli](https://www.npmjs.com/package/generate-react-cli). This will also create the necessary scss module and test file.
 
 ## Available Scripts
 
@@ -11,39 +9,27 @@ In the project directory, you can run:
 
 ### `npm start`
 
-Runs the app in the development mode.<br />
+Runs the app in the development mode.
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.<br />
+Launches the test runner in the interactive watch mode.
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Git Usage
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The project is built with [GitHub flow](https://guides.github.com/introduction/flow/) but instead of merges we are using rebase.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+This will result in a linear git history making it easier to follow.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# IMPORTANT
 
-### `npm run eject`
+Please follow the guidelines of how to write a good commit message which you can find [here](https://chris.beams.io/posts/git-commit/)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Getting Started with the workflow
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Read through the setup for rebase workflow [here](https://docs.google.com/document/d/1XVnt1ODvGCVINlgGuykjcnupNb-xyrMyvhOZT-wSQNE/edit?usp=sharing). This should provide you with the basic knowledge to work with the specific commands we are using.
+2. Prefer using `git commit --amend` and `git rebase -i 'COMMITID^'` when possible to reduce the number of "fixes" in the commit tree.
+3. ...Profit
